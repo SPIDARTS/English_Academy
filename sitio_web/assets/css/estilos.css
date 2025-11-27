@@ -1,0 +1,574 @@
+/*      ESTILOS GENERALES       */
+body {
+    font-family: "Segeo UI", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contenedor pricipal */
+main {
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+/* Párrafos */
+p {
+    margin-bottom: 15px;
+}
+
+/* Enlaces */
+a {
+    color: #1e40af;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #facc15;
+}
+
+/*      NAVBAR      */
+nav {
+    background-color: #1e3a8a;
+    padding: 12px 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li.right {
+    margin-left: auto;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #facc15;
+    color: #1e3a8a;
+}
+
+/* Página activa */
+nav ul li a.activo {
+    background-color: #facc15;
+    color: #1e3a8a;
+}
+
+/*      SECCIONES       */
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0,0.1);
+}
+
+/* Imágenes dentro de los artículos de noticias */
+#noticias article img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* Galería */
+#galeria img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+} 
+
+#galeria img:hover {
+    transform: scale(1.05);
+}
+
+/*      FORMULARIOS     */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0,0.1);
+}
+
+form input:not([type="checkbox"]),
+form select,
+form button {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+
+/* Botón */
+form button {
+    background: #1e3a8a;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #facc15;
+    color: #1e3a8a;
+}
+
+/* Mensaje */
+form p {
+    padding: 10px;
+    text-align: center;
+}
+
+/*      FOOTER      */
+footer {
+    background-color: #1e3a8a;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 40px;
+}
+
+
+
+/*      GESTIÓN DE CITAS        */
+
+/* Contenedor general */
+#mensaje {
+    text-align: center;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* Títulos */
+h2, h3 {
+    text-align: center !important;
+    color: #1e3a8a;
+    margin-top: 10px;
+}
+
+
+
+/* FORMULARIO */
+#formCita {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#formCita label {
+    display: block;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-top: 10px;
+}
+
+#formCita input[type="date"],
+#formCita input[type="time"],
+#formCita input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#formCita button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background: #1e3a8a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#formCita button:hover {
+    background: #facc15;
+    color: #1e3a8a;
+}
+
+/* TABLA DE CITAS */
+#tablaCitas,
+#table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#tablaCitas th, 
+#tablaCitas td,
+#table th, 
+#table td {
+    border: 1px solid #e2e8f0;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#tablaCitas th,
+#table th {
+    background-color: #1e3a8a;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#tablaCitas tr:nth-child(even),
+#table tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+#tablaCitas tr:hover,
+#table tr:hover {
+    background-color: #facc15;
+    color: #1e3a8a;
+    cursor: pointer;
+}
+
+/* Botones dentro de la tabla */
+#tablaCitas button,
+#table button {
+    background-color: #1e3a8a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin: 2px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+#tablaCitas button:hover,
+#table button:hover {
+    background-color: #facc15;
+    color: #1e3a8a;
+}
+
+/* Checkbox de mostrar contraseña */
+.mostrar-pass {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin: 10px 0;
+  font-weight: normal;
+  color: #1e3a8a;
+}
+
+.mostrar-pass input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+
+/* Contenedor principal centrado */
+#formUsuario, 
+#tablaUsuarios,
+#tabla-section {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajuste visual del formulario */
+#formUsuario,
+#form-noticia,
+#tabla-section {
+    max-width: 500px;
+    margin-top: 20px;
+    padding: 25px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#form-section textarea {
+    height: 100px;
+    width: 500px;
+}
+
+/* Etiquetas dentro del formulario */
+#formUsuario label,
+#form-noticia label,
+#perfil {
+    display: block;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-top: 10px;
+}
+
+/* Inputs y selects del formulario */
+#formUsuario input, 
+#formUsuario select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Botón guardar */
+#formUsuario button {
+    display: block;
+    width: 100%;
+    background-color: #1e3a8a;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#formUsuario button:hover {
+    background-color: #facc15;
+    color: #1e3a8a;
+}
+
+/* Centrar la tabla de usuarios */
+#tablaUsuarios,
+#tabla-section {
+    width: 80%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+/* Ancho específico para cada columna */
+#tablaUsuarios th:nth-child(1),
+#tablaUsuarios td:nth-child(1),
+#tabla-section th:nth-child(1),
+#tabla-section td:nth-child(1) {
+    width: 10%;
+}
+#tablaUsuarios th:nth-child(2),
+#tablaUsuarios td:nth-child(2),
+#tabla-section th:nth-child(2),
+#tabla-section td:nth-child(2) {
+    width: 20%;
+}
+#tablaUsuarios th:nth-child(3),
+#tablaUsuarios td:nth-child(3),
+#tabla-section th:nth-child(3),
+#tabla-section td:nth-child(3) {
+    width: 35%;
+}
+#tablaUsuarios th:nth-child(6),
+#tablaUsuarios td:nth-child(6),
+#tabla-section th:nth-child(6),
+#tabla-section td:nth-child(6) {
+    width: 35%;
+}
+
+/* Encabezados */
+#tablaUsuarios th,
+#tabla-section th {
+    background-color: #1e3a8a;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+
+#tablaUsuarios td,
+#tabla-section td {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+/* Filas alternas y efecto hover */
+#tablaUsuarios tr:nth-child(even),
+#tabla-section tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+#tablaUsuarios tr:hover,
+#tabla-section tr:hover {
+    background-color: #facc15;
+    color: #1e3a8a;
+}
+
+/* Botones dentro de la tabla */
+#tablaUsuarios button,
+#tabla-section button {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+#tablaUsuarios button:hover,
+#tabla-section button:hover {
+    background-color: #facc15;
+    color: #1e3a8a;
+}
+
+/* ESTILOS PARA LA VERSIÓN MÓVIL */
+@media (max-width: 768px) {
+    
+    /* Contenedor principal */
+    main {
+        padding: 10px; 
+    }
+
+    /* BARRA DE NAVEGACIÓN */
+    nav {
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-direction: column; 
+        align-items: stretch; 
+        gap: 5px;
+    }
+
+    nav ul li {
+        margin-left: 0; 
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul li.right {
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        display: block; 
+        padding: 10px 12px;
+        border-radius: 5px; 
+    }
+
+    img {
+    max-width: 100%; 
+    height: auto;    
+    display: block;  
+    }
+    
+    section {
+        margin: 20px 0;
+        padding: 15px;
+    }
+
+    form,
+    #formCita,
+    #formUsuario,
+    #form-noticia,
+    #tabla-section {
+        max-width: 100%; 
+        margin: 15px auto;
+        padding: 20px;
+    }
+    
+    #form-section textarea {
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+
+    /* GALERÍA */
+    #galeria img {
+        width: 48%; 
+        margin: 1%;
+    }
+    
+    /* IMÁGENES DE NOTICIAS */
+    #noticias article img {
+        max-width: 100%; 
+        height: auto;
+    }
+
+    /* TABLAS (Citas y Usuarios) */
+    #tablaCitas,
+    #table,
+    #tablaUsuarios,
+    #tabla-section {
+        width: 100%;
+        display: block;
+        overflow-x: auto; 
+        margin-top: 15px;
+        table-layout: auto; 
+    }
+    
+    #tablaCitas th, 
+    #tablaCitas td,
+    #table th, 
+    #table td,
+    #tablaUsuarios th,
+    #tablaUsuarios td,
+    #tabla-section th,
+    #tabla-section td {
+        min-width: 100px; 
+        padding: 8px 10px;
+        white-space: normal;
+    }
+    
+    #tablaUsuarios,
+    #tabla-section {
+        width: 100%; 
+    }
+
+}
