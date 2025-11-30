@@ -1,9 +1,9 @@
 <?php
 // Datos de conexión a la base de datos
-$host ="localhost";
-$user = "root";
-$pass = "";
-$db = "sitio_web";
+$host ="sql100.infinityfree.com";
+$user = "if0_40538716";
+$pass = "drt120612";
+$db = "if0_40538716_proyecto_academy";
 
 // Crear la conexión a la base de datos usando mysqli
 $conn = new mysqli($host, $user, $pass,$db);
@@ -16,4 +16,5 @@ if ($conn->connect_error) {
 
 
 $conn->set_charset("utf8mb4");
+
 ?>
